@@ -1,0 +1,32 @@
+{
+  "name": "OrganizeFunctions",
+  "version": "0.0.1",
+  "description": "Function runner function =)",
+  "main": "index.html",
+  "scripts": {
+    "html": "html-minifier --collapse-whitespace ./src/index.html -o ./dist/index.html",
+    "css": "stylus --include ./node_modules --include-css --compress ./src/css/main.styl -o ./dist/css/style.css",
+    "js": "browserify ./src/js/main.js | uglifyjs > ./dist/js/bundle.js",
+    "build": "npm run html & npm run css & npm run js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/semihgokduman/OrganizeFunctions.git"
+  },
+  "keywords": [
+    "function",
+    "organize"
+  ],
+  "author": "Semih Gökduman",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/semihgokduman/OrganizeFunctions/issues"
+  },
+  "homepage": "https://github.com/semihgokduman/OrganizeFunctions",
+  "devDependencies": {
+    "html-minifier": "^0.8.0",
+    "browserify": "^11.2.0",
+    "stylus": "^0.52.4",
+    "uglify-js": "^2.4.24"
+  }
+}
