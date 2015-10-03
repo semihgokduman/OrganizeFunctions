@@ -55,5 +55,3 @@
 
 //s.addFunction(function added() { console.log(123); }, 2).runAll();
 
-
-
